@@ -1,3 +1,3 @@
 # weather-search-app
-##Preview
+## Preview
 https://weather-ff3e9.web.app/
