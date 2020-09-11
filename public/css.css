@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Tahoma, sans-serif;
+    font-size: 1.079rem;
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 25em){
+    html { font-size: 1.2em }
+  }
+.big:hover,.bigger:hover,.biggest:hover{
+    opacity: 1;
+}
+.search{
+    width: 20%;
+}
+.search:hover{
+    cursor: pointer;
+    background-color: rgb(231, 218, 95);
+}
+input:hover, input:focus{
+    box-shadow: rgb(113, 160, 179) 0px 0px 3px inset;
+}
+nav{
+    width: 100%;
+    background-color: rgb(83, 164, 179);
+    color: white;
+    display: flex;
+}
+.navsearch{
+    visibility: hidden;
+    width: fit-content;
+    margin-left: auto;
+}
+nav div{
+    padding: 2vh ;
+}
+nav div:nth-child(2){
+    margin-left: auto;
+    /* margin-right: 2rem; */
+}
+.body{
+    display: flex;
+}
+.textBox{
+    width: 45vw;
+    display: flex;
+    animation: text 2s;
+}
+@keyframes text {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.box{
+    overflow: hidden;
+    background-color: rgb(236, 230, 230);
+    width: 80vw;
+    height:89vh ;
+    position: relative;
+}
+.big{
+    top: 40%;
+    width: 40%;
+    height: 40%;
+    background-color: rgb(141, 189, 228,1);
+    animation: big 6s linear infinite alternate-reverse;
+}
+.bigger{
+    top: 35%;
+    left: 20%;
+    width: 45%;
+    height: 45%;
+    background-color: rgb(87, 189, 175,0.5);
+    animation: bigger 5s linear 1s infinite alternate-reverse;
+}
+
+.biggest{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 20%;
+    top: 30%;
+    left: 50%;
+    width: 48%;
+    height: 55%;
+    background-color: rgb(116, 205, 221,0.87);
+    animation: biggest 7s linear 2s infinite alternate-reverse;
+}
+button{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+@keyframes bigger{
+    0%{
+        top: 35%;
+        opacity: 0.4;
+    }
+    50%{
+        top: 45%;
+        opacity: 0.5;
+    }
+    75%{
+        top: 23%;
+        opacity: 0.4;
+    }
+    100%{
+        top: 35%;
+        opacity: 0.87;
+    }
+}
+@keyframes biggest{
+    0%{
+        top: 30%;
+        opacity: 0.65;
+    }
+    50%{
+        top: 40%;
+        opacity: 0.7;
+    }
+    75%{
+        top: 20%;
+        opacity: 0.8;
+    }
+    100%{
+        top: 30%;
+        opacity: 0.98;
+    }
+}
+@keyframes big{
+    0%{
+        top: 40%;
+        opacity: 0.7;
+    }
+    50%{
+        top: 55%;
+        opacity: 0.6;
+    }
+    75%{
+        top: 35%;
+        opacity: 0.5;
+    }
+    100%{
+        top: 40%;
+        opacity: 0.9;
+    }
+}
+.name{
+    color: rgb(18, 73, 99);
+    font-size: 4.3vw;
+}
+.big,.bigger,.biggest{
+    position: absolute;
+}
+.weather_text{
+    margin: auto;
+    max-width: 80%;
+    animation: text 2s;
+}
+.logo{
+    font-size: 1.2rem;
+    text-shadow: 1px 2px 2px white;
+}
+h1{
+    letter-spacing: 10px;
+    color: rgb(38, 40, 58);
+    font-size: 5vw;
+    margin-bottom: 12%;
+}
+p{
+    color: rgb(122, 121, 121);
+    letter-spacing: 3px;
+}
+input{
+    color: rgb(138, 136, 136);
+    width: 85%;
+    font-size: 1rem;
+    border: 1px solid rgb(216, 204, 96);
+    outline: none;
+    padding: 0.6rem;
+    position: relative;
+}
+form input:focus{
+    color: rgb(42, 31, 59);;
+}
+form{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(216, 204, 96);
+}
+form div{
+    display: flex;
+    position: relative;
+    width: 15%;
+}
+.loop{
+    position: relative;
+    font-size: 100%;
+    margin: auto;
+    color: rgb(104, 104, 104);
+}
+form div:hover{
+    cursor: pointer;
+}
+.form_change{
+    border-radius: 20px;
+    display: flex;
+    height: 6vh;
+    width: 100%; 
+    margin: auto;
+    position: relative;
+}
+.inputchange{
+    margin-left: auto;
+    padding: 0 1.3rem;
+    height: 6vh;
+}
+.keyboard{
+    font-size: 5rem;
+    position: absolute;
+    right: -2%;
+    opacity: 0;
+}
+.Weather_icon{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 800px){
+    .keyboard{
+        opacity: 1;
+    }
+    .name{
+        font-size: 8vw;
+    }
+    .body{
+        flex-direction: column;
+    }
+    .box{
+        width: 100%;
+        height: 50vh;
+    }
+    .textBox{
+        width: 100%;
+    }
+    .weather_text{
+        margin: 10vh auto;
+    }
+    .form_change{
+        /* transform: translateX(2rem); */
+        width: 40vw;
+    }
+    h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+}

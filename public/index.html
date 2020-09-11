@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://use.fontawesome.com/32f5e9efdf.js"></script>
+    <link rel="stylesheet" href="./css.css">
+    <meta name="theme-color" content="#daeff5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="./icons/icon-96x96.png">
+    <title>Document</title>
+</head>
+<body onload="call()">
+    <nav>
+        <div class="logo">Weather</div>
+        <div class="navsearch">search</div>
+    </nav>
+
+    <div class="body">
+        <div class="textBox">
+            <div class="weather_text">
+                <h1>Weather</h1>
+                <p>Where ou can get real time weather information</p>
+                <br>
+                <form class="form" name="form">
+                    <input name="city" type="text" autocorrect = "off" size="20" autocomplete="off" placeholder="Search city">
+                    <button class="search">
+                        <i class="fa fa-search loop" aria-hidden="true"></i> 
+                    </button>
+                </form>
+
+            </div>
+        </div>
+        <div class="box">
+            <i class="fa fa-keyboard-o keyboard" aria-hidden="true"></i>
+            <div class="big"></div>
+            <div class="bigger"></div>
+            <div class="biggest"></div>
+        </div>
+    </div>
+
+    <script src="./js/fetch.js"></script>
+    <script src="./js/app.js"></script>
+
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA5Z0sJ53tFAQVdLgITMrByN-cdYYd9Ajg",
+    authDomain: "weather-ff3e9.firebaseapp.com",
+    databaseURL: "https://weather-ff3e9.firebaseio.com",
+    projectId: "weather-ff3e9",
+    storageBucket: "weather-ff3e9.appspot.com",
+    messagingSenderId: "1040819329844",
+    appId: "1:1040819329844:web:9c5839b24cb8472710a361"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</body>
+</html>
