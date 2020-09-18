@@ -10,11 +10,14 @@ let call= ()=>{
     }
 }
 
+//trigger focus mode in form when keyboard icon is clicked
 let keyboard = document.querySelector('.keyboard');
 keyboard.addEventListener('click',()=>{
     let input = document.querySelector('input');
     input.focus();
 })
+
+//sending response to screen and changing some elements position
 let updatePage = (object)=>{
     let navsearch = document.querySelector('.navsearch');
     let form = document.querySelector('.form');
@@ -56,9 +59,7 @@ let updatePage = (object)=>{
     }   
 }
 
-let check = ()=>{
-    
-}
+//getting form data and returning a response
 let go = document.querySelector('.form');
 go.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -80,42 +81,9 @@ go.addEventListener('submit',(e)=>{
                 main_description: data.weather[0].main
             }
             updatePage(object)
-        }
-        
-        
+        } 
     }
     )
     .catch(err=>{console.log(err);alert('Request could not be made.Try again later')})
 }
 )
-
-
-
-// document.querySelector('input').addEventListener('keypress', function (e) {
-//     if (e.key === 'Enter') {
-//         let city = document.forms["form"]["city"].value;
-//         let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`;
-//         fetch(url).then(value => value.json()).then(data => {
-             
-//             if(data.cod == 404){
-//                return alert(data.message)
-//             }
-//             else{
-//                 object = {
-//                     code: data.code,
-//                     name: data.name,
-//                     temp: data.main.temp,
-//                     visibility:data.visibility,
-//                     description: data.weather[0].description,
-//                     icon: data.weather[0].icon,
-//                     main_description: data.weather[0].main
-//                 }
-//                 updatePage(object)
-//             }
-            
-//         }
-//         )
-//         .catch(err=>console.log(err))
-      
-//     }
-// });
